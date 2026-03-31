@@ -1,14 +1,15 @@
-public class Main {
-    public static void main(String[] args) {
+public class Main{
+    public static void main(String[] args){
+        boolean isAcyclic;
 
+        //**********************************
         // Change file name here to test
         String fileName = "input2.txt";
+        //**********************************
 
-        DirectedGraph graph = GraphFileReader.readGraph(fileName);
-
-        System.out.println("Checking graph...");
-
-        boolean isAcyclic = AcyclicChecker.checkAcyclic(graph);
+        DirectedGraph graph=GraphFileReader.readGraph(fileName);
+        System.out.println("Reading graph...");
+        isAcyclic = AcyclicChecker.checkAcyclic(graph);
 
         if (isAcyclic) {
             System.out.println("Graph is ACYCLIC (YES)");
