@@ -6,12 +6,10 @@
 public class Main{
     public static void main(String[] args){
 
-
         //************************************
         // Change this file name to test graphs
-        String fileName="input2.txt";
+        String fileName="c_40_4.txt";
         //************************************
-
 
         DirectedGraph graph=GraphFileReader.readGraph(fileName);
 
@@ -25,7 +23,18 @@ public class Main{
         graph.printGraph();
         System.out.println();
 
+//execution time calculator
+//*************************
+        long startTime = System.nanoTime();
+
         boolean isAcyclic=AcyclicChecker.checkAcyclic(graph);
+
+        long endTime = System.nanoTime();
+        long duration = endTime - startTime;
+        System.out.println("********************************");
+        System.out.println("Execution time: " + duration + " ns");
+        System.out.println("********************************");
+//*************************
 
         System.out.println();
         System.out.println("Final answer:");

@@ -9,7 +9,7 @@ public class Main{
 
         //**********************************
         // Change file name here to test
-        String fileName = "input1.txt";
+        String fileName = "input2.txt";
         //**********************************
 
         DirectedGraph graph=GraphFileReader.readGraph(fileName);
